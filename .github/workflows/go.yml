@@ -19,10 +19,9 @@ jobs:
         go-version: 1.19
 
     - name: Build
-      - run: |
-        cd .\cmd\
-        go build -o ..\build\go-app.exe -v
-        cd ..
+      - run: cd .\cmd\
+      - run: go build -o ..\build\go-app.exe -v
+      - run: cd ..
       
     - name: Deploy to Azure
       uses: Azure/webapps-deploy@v2
