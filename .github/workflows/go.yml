@@ -1,7 +1,5 @@
 name: Build and push
 
-enable-oryx-build: false
-
 on:
   push:
     branches: [ main ]
@@ -25,6 +23,7 @@ jobs:
       
     - name: Deploy to Azure
       uses: Azure/webapps-deploy@v2
+      enable-oryx-build: false
       with:
         app-name: cryogenetics-logistics-solution
         package: build/
