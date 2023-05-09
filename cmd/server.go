@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 )
 
 /**
@@ -10,8 +11,14 @@ import (
  *	Starts the server.
  */
 func main() {
+	// Get port
+	port := os.Getenv("HTTP_PLATFORM_PORT")
+	if port == "" {
+		port = "8080"
+	}
+
 	http.HandleFunc("/", HelloServer)
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":"+port, nil)
 }
 
 /**
