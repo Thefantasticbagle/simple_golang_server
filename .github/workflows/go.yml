@@ -1,5 +1,7 @@
 name: Build and push
 
+enable-oryx-build: false
+
 on:
   push:
     branches: [ main ]
