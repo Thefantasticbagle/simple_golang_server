@@ -24,7 +24,7 @@ jobs:
     - name: Build
       run: |
         cd cmd
-        go build -o ../build/go-app.exe -v
+        go build -o ../../build/go-app.exe -v
       
     - name: Deploy to Azure
       uses: Azure/webapps-deploy@v2
