@@ -30,6 +30,6 @@ jobs:
       uses: Azure/webapps-deploy@v2
       with:
         app-name: cryogenetics-logistics-solution
-        package: build/
+        package: code/build/
         publish-profile: ${{ secrets.azureWebAppPublishProfile }}
         enable-oryx-build: false
